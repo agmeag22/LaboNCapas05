@@ -8,7 +8,10 @@
 <title>SpringJPA</title>
 </head>
 <body>
-
+	<form action = "${pageContext.request.contextPath}/formSearch" method="POST">
+		<input type = "number" name = "studentCode" path = "studentCode"/>
+		<input type = "submit" value = "Search"/>
+	</form>
 	<table>
 		<tr>
 			<th>Name</th>
@@ -16,6 +19,7 @@
 			<th>Age</th>
 			<th>Status</th>
 		</tr>
+		
 			<c:forEach items="${students}" var="students">
 				<tr>
 					<td>${students.sName}</td>
